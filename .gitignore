@@ -1,0 +1,33 @@
+# Training data
+# data/
+
+# Model outputs
+# models/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual env
+.venv/
+venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# PyTorch checkpoints
+*.pt
+*.pth
+
+# Jupyter
+.ipynb_checkpoints/

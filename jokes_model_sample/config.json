@@ -1,0 +1,65 @@
+{
+  "status": "finished",
+  "paths": {
+    "data": "data\\clean_data.txt",
+    "out_dir": "models\\jokes_bpe",
+    "model_file": "models\\jokes_bpe\\model.pt",
+    "tokenizer_file": "models\\jokes_bpe\\tokenizer.json",
+    "config_file": "models\\jokes_bpe\\config.json",
+    "copied_clean_data_file": "models\\jokes_bpe\\data_clean.txt"
+  },
+  "model": {
+    "vocab_size": 2000,
+    "block_size": 128,
+    "n_layer": 4,
+    "n_head": 4,
+    "n_embd": 256,
+    "dropout": 0.2
+  },
+  "tokenizer": {
+    "type": "huggingface_tokenizers_byte_level_bpe",
+    "vocab_size": 2000,
+    "requested_vocab_size": 2000,
+    "min_pair_freq": 2,
+    "train_chars": 3000000,
+    "special_tokens": [
+      "<|unk|>",
+      "<|pad|>",
+      "<|bos|>",
+      "<|user|>",
+      "<|assistant|>",
+      "<|eos|>"
+    ]
+  },
+  "training": {
+    "block_size": 128,
+    "batch_size": 32,
+    "max_iters": 5000,
+    "eval_interval": 100,
+    "eval_iters": 100,
+    "learning_rate": 0.0003,
+    "weight_decay": 0.1,
+    "grad_clip": 1.0,
+    "seed": 1337,
+    "device": "cpu"
+  },
+  "dataset": {
+    "raw_chars": 35014033,
+    "total_tokens": 10683233,
+    "train_tokens": 9614909,
+    "val_tokens": 1068324,
+    "train_ratio": 0.9
+  },
+  "checkpoint": {
+    "best_val_loss": 2.666271924972534,
+    "best_step": 4900
+  },
+  "runtime": {
+    "created_at": "2026-06-19T10:11:14",
+    "python_version": "3.14.6",
+    "platform": "Windows-11-10.0.22621-SP0",
+    "torch_version": "2.12.1+cpu",
+    "cuda_available": false,
+    "device": "cpu"
+  }
+}
